@@ -17,6 +17,15 @@ public class basic {
             this.data = data;
         }
     }
+    static void insertAtNull(Node head, int val) {
+        Node temp = new Node(val);
+        Node t = head;
+        while (t.next != null) {
+            t = t.next;
+        }
+        t.next = temp;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(1);
         Node b = new Node(2);
@@ -29,6 +38,7 @@ public class basic {
         c.next = d;
         d.next = e;
 
+        insertAtNull(a, 87);
         display(a);
 
         // Node temp = a;
