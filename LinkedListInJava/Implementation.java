@@ -31,6 +31,15 @@ public class Implementation {
                 temp = temp.next;
             }
         }
+        int size() {
+            Node temp = head;
+            int count = 0;
+            while(temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
     }
     
 
@@ -43,7 +52,8 @@ public class Implementation {
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
         ll.insertAtEnd(77);
-
         ll.display();
+        System.out.println();
+        System.out.println("Size of list is : "+ll.size());
     }
 }
