@@ -12,6 +12,7 @@ public class InertAt {
 
     Node head = null;
     Node tail = null;
+    int size = 0;
     void insertAtEnd(int val) {
         Node temp = new Node(val);
         if(head == null) {
@@ -52,6 +53,15 @@ public class InertAt {
         }
     }
 
+    void deleteAt(int idx) {
+        Node temp = head;
+        for(int i = 1; i <= idx -1; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        size--;
+    }
+
     void insertAt(int idx, int val) {
         Node t = new Node(val);
         Node temp = head;
@@ -88,9 +98,13 @@ public class InertAt {
         ll.insertAtEnd(3);
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
+        ll.insertAtEnd(6);
 
         // ll.insertAt(0, 6);
-        // ll.display();
-        System.err.println(ll.getAt(2));
+        ll.display();
+        System.out.println();
+        ll.deleteAt(4);
+        ll.display();
+        // System.err.println(ll.getAt(2));
     }
 }
