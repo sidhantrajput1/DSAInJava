@@ -105,6 +105,8 @@ public class InertAt {
         System.out.println();
         ll.deleteAt(4);
         ll.display();
-        // System.err.println(ll.getAt(2));
+        // ll.getAt(3);
+        System.out.println();
+        System.err.println(ll.getAt(2));
     }
 }
