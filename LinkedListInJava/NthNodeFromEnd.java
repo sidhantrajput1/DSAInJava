@@ -19,6 +19,20 @@ public class NthNodeFromEnd {
         return temp;
     }
 
+    static Node ntNode2(Node head, int n) {
+        Node slow = head;
+        Node fast = head;
+        for(int i = 1; i <= n; i++) {
+            fast = fast.next;
+        }
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow;
+    }
+
     public static class Node{
         int data;
         Node next;
@@ -37,6 +51,28 @@ public class NthNodeFromEnd {
             temp = temp.next;
         }
     }
+
+    static Node deleteNthFromEnd(Node head, int n) {
+        Node slow = head;
+        Node fast = head;
+
+        for(int i = 1; i <= n; i++) {
+            fast = fast.next;
+        }
+
+        if (fast == null) {
+            head = head.next;
+            return head;
+        }
+
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        slow.next = slow.next.next;
+        return head;
+    } 
     public static void main(String[] args) {
         Node a = new Node(4);
         Node b = new Node(5);
@@ -50,8 +86,12 @@ public class NthNodeFromEnd {
         d.next = e;
         // 4 5 77 22 99
         // display(a);
-        Node q = nthNode(a, 3);
-        System.out.println(q.data);
+        // Node q = nthNode(a, 3);
+        // Node r = ntNode2(a, 3);
+        // System.out.println(r.data);
         // display(a);
+
+        deleteNthFromEnd(a, 2);
+        display(a);
     }
 }
