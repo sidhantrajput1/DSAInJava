@@ -1,6 +1,7 @@
 package ArraysInJava;
 
 public class MinMax {
+    // Write a Java program to find the maximum and minimum value of an array.
     static int max(int[] arr) {
         int mx = arr[0];
 
