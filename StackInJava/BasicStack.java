@@ -15,5 +15,10 @@ public class BasicStack {
         System.err.println(st.peek());
 
         System.err.println(st);
+
+        st.pop();
+
+        System.err.println(st);
+        System.err.println("Size is : "+st.size());
     }
 }
