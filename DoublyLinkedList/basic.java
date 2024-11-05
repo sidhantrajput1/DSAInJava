@@ -21,6 +21,13 @@ public class basic {
     }
 
     // display reverse
+    static void dispalyreverse(Node tail) {
+        Node temp = tail;
+        while (temp != null) {
+            System.out.print(temp.data+" ");
+            temp = temp.prev;
+        }
+    }
     
     public static void main(String[] args) {
         Node a = new Node(1);
@@ -41,6 +48,7 @@ public class basic {
         e.prev = d;
         e.next = null;
 
-        dispaly(a);
+        // dispaly(a);
+        dispalyreverse(e);
     }
 }
