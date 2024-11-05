@@ -28,6 +28,24 @@ public class basic {
             temp = temp.prev;
         }
     }
+
+    // display list using random node
+
+    static void dispaly2(Node random) {
+        Node temp = random;
+
+        // move this temp backward to the head
+        while (temp.prev != null) {
+            temp = temp.prev;
+        }
+
+        // print the list
+        while(temp != null) {
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+
+    }
     
     public static void main(String[] args) {
         Node a = new Node(1);
@@ -49,6 +67,7 @@ public class basic {
         e.next = null;
 
         // dispaly(a);
-        dispalyreverse(e);
+        // dispalyreverse(e);
+        dispaly2(c);
     }
 }
