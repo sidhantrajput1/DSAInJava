@@ -25,7 +25,7 @@ public class basic {
         Node temp = tail;
         while (temp != null) {
             System.out.print(temp.data+" ");
-            temp = temp.prev;
+            temp = temp.prev; 
         }
     }
 
