@@ -1,11 +1,10 @@
 package StackInJava;
 
-import java.util.Scanner;
 import java.util.Stack;
 // Move stack in same order on antoher stack
 public class CopyStack {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
+        // Scanner sc= new Scanner(System.in);
         Stack<Integer> st = new Stack<>();
 
         st.push(1);
@@ -16,7 +15,7 @@ public class CopyStack {
         System.out.println(st);
 
         // Reverse Order
-        Stack<Integer> rt = new Stack<>();
+        Stack<Integer> gt = new Stack<>();
         // while (st.size() > 0) {
         //     int x = st.peek();
         //     rt.push(x);
@@ -24,7 +23,13 @@ public class CopyStack {
         // }
 
         while (st.size() > 0)  {
-            rt.push(st.pop());
+            gt.push(st.pop());
+        }
+
+        Stack<Integer> rt = new Stack<>();
+
+        while (gt.size() > 0) {
+            rt.push(gt.pop());
         }
 
         System.out.println(rt);
