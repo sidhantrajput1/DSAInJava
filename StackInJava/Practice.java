@@ -18,26 +18,16 @@ public class Practice {
         // System.out.println(st.pop()); // Popped element: 5
         
         // print in reverse order
+        int idx = 2;
+        int x = 44;
         Stack<Integer> rt = new Stack<>(); 
-
-        // while (st.size() > 0) {
-        //     int x =  st.peek();
-        //     rt.push(x);
-        //     st.pop();
-        // }
-
-        while (st.size() > 0) {
+        while (st.size() > idx) {
             rt.push(st.pop());
         }
-
-        System.out.println(rt);
-        // System.out.println(st);
-
-        // copy the element
-        Stack<Integer> gt = new Stack<>();
+        st.push(x);
         while (rt.size() > 0) {
-            gt.push(rt.pop());
+            st.push(rt.pop());
         }
-        System.out.println(gt);
+        System.out.println(st);
     }
 }
