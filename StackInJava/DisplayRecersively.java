@@ -10,6 +10,15 @@ public class DisplayRecersively {
         displayReverse(st);
         st.push(top);
     }
+    static void displayRec(Stack<Integer> st) {
+        if (st.size() == 0) {
+            return;
+        }
+        int top = st.pop();
+        displayRec(st);
+        System.out.print(top+" ");
+        st.push(top);
+    }
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
 
@@ -21,5 +30,7 @@ public class DisplayRecersively {
 
         System.out.println(st);
         displayReverse(st);
+        System.out.println();
+        displayRec(st);
     }
 }
