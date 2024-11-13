@@ -2,9 +2,13 @@ package StackInJava;
 
 public class ArrayImplementation {
     public static class  Stack {  
-        int[] arr = new int[5];
+        int[] arr = new int[50];
         int idx = 0;
         void push(int x) {
+            if (isFull()) {
+                System.out.println("stack is full");
+                return;
+            }
             arr[idx] = x;
             idx++;
         }  
@@ -34,6 +38,20 @@ public class ArrayImplementation {
         int size() {
             return idx;
         }
+        boolean isEmpty() {
+            if(idx == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        boolean isFull() {
+            if (idx == arr.length) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
     public static void main(String[] args) {
         Stack st = new Stack();
@@ -43,10 +61,11 @@ public class ArrayImplementation {
         st.push(7);
         st.push(8);
         st.display();
-        st.pop();
+        st.push(11);
+        // st.pop();
         st.display();
-        System.out.println(st.peek());
-        st.display();
+        // System.out.println(st.peek());
+        // st.display();
         // System.out.println(st.size());
     }
 }
