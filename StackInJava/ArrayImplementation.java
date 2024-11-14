@@ -52,6 +52,9 @@ public class ArrayImplementation {
                 return false;
             }
         }
+        int capacity() {
+            return arr.length;
+        }
     }
     public static void main(String[] args) {
         Stack st = new Stack();
@@ -62,9 +65,9 @@ public class ArrayImplementation {
         st.push(8);
         // st.display();
         // st.push(11);
-        st.pop();
+        // st.pop();
         st.display();
-        // System.out.println(st.peek());
+        // System.out.println(st.capacity());
         // st.display();
         // System.out.println(st.size());
     }
