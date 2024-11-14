@@ -1,7 +1,7 @@
 package Stack;
 import java.util.*;
 public class BalancedBracket {
-    // Check whether a given bracket sequence is balanced or not !!\
+    // Check whether a given bracket sequence is balanced or not !!
     static boolean isBalanced(String str) {
         Stack<Character> st = new Stack<>();
         int n = str.length();
