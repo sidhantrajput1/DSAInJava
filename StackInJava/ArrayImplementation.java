@@ -60,9 +60,9 @@ public class ArrayImplementation {
         st.push(4);
         st.push(7);
         st.push(8);
-        st.display();
-        st.push(11);
-        // st.pop();
+        // st.display();
+        // st.push(11);
+        st.pop();
         st.display();
         // System.out.println(st.peek());
         // st.display();
