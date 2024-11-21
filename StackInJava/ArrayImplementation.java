@@ -61,7 +61,7 @@ public class ArrayImplementation {
         st.push(2);
         st.push(3);
         st.push(4);
-        st.push(7);
+        st.push(5);
         st.push(8);
         // st.display();
         // st.push(11);

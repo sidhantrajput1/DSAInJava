@@ -1,0 +1,5 @@
+Stack
+  1. Remove from botton / any index
+  2. Push at botton - using recursion
+  3. Display Stack recursively
+  4. Reverse Stack recursively
