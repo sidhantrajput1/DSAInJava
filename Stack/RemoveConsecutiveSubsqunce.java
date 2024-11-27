@@ -17,7 +17,7 @@ public class RemoveConsecutiveSubsqunce {
         int[] res = new int[st.size()];
         int m = res.length;
         for(int i = m-1; i >= 0; i--){
-            res[i] = st.pop();
+            res[i] = st.pop(); 
         }
         return res;
     }
