@@ -1,7 +1,7 @@
 package Queue;
 
 import java.util.ArrayDeque;
-// import java.util.LinkedList;
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class Basic {
@@ -13,13 +13,25 @@ public class Basic {
         a.add(3);
         a.add(4);
         a.add(5);
-        System.out.println(a);
-        a.poll();
-        System.out.println(a);
-        a.remove();
-        System.out.println(a);
-        System.out.println(a.element());
+        // System.out.println(a);
+        // a.poll();
+        // System.out.println(a);
+        // a.remove();
+        // System.out.println(a);
+        // System.out.println(a.element());
         // System.out.println(a.peek());
+
+        Queue<Integer> help = new LinkedList<>();
+        while(a.size() > 0) {
+            System.out.print(a.peek()+" ");
+            int x = a.poll();
+            help.add(x);
+        }
+        while(help.size() > 0){
+            a.add(help.poll());
+        }
+
+        // System.out.println(5>0);
 
         // q.add(1);
         // q.add(2);
