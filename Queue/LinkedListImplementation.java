@@ -44,6 +44,7 @@ public class LinkedListImplementation {
             size--;
             return x;
         }
+        
         void display() {
             if(size == 0) {
                 System.out.println("Queue is empty");
