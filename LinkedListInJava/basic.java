@@ -17,6 +17,7 @@ public class basic {
             this.data = data;
         }
     }
+    
     static void insertAtNull(Node head, int val) {
         Node temp = new Node(val);
         Node t = head;
