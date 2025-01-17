@@ -78,6 +78,8 @@ public class Test {
         return false;
     }
 
+    
+
     public static void main(String[] args) {
         Node a = new Node(3);
         Node b = new Node(2);
@@ -102,7 +104,7 @@ public class Test {
         // display(rev);
         // Node mid =  middleEle(a);
         // System.out.println(mid.data);
-        boolean has = hasCycle(a);
-        System.out.println(has);
+        // boolean has = hasCycle(a);
+        // System.out.println(has);
     }
 }
