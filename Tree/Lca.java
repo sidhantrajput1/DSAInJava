@@ -43,8 +43,6 @@ public class Lca {
         root.left.right.left = new Node(3);
         root.left.right.right = new Node(5);
         
-        // Node p = root.left;
-        // Node q = root.right;
         
         Lca main = new Lca();
 
