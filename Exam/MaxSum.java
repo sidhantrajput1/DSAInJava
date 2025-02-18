@@ -10,7 +10,7 @@ public class MaxSum {
             currSum = Math.max(arr[i], currSum + arr[i]);
             maxSum = Math.max(maxSum, currSum);
         }
-
+        
         return maxSum;
     }
     public static void main(String[] args) {
